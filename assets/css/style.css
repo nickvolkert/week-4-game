@@ -1,0 +1,74 @@
+body{
+  background-color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+h1{
+  font-size: 24px;
+  text-align: center;
+  padding: 20px 0;
+}
+#gameWrapper{
+
+}
+#gameTop{
+
+}
+h2{
+
+}
+h3{
+
+}
+#instructions{
+
+}
+#instructions p{
+
+}
+#scoreWrapper{
+
+}
+#currentScore{
+
+}
+#progressTracker{
+
+}
+#winTracker{
+
+}
+#lossTracker{
+
+}
+#gemWrapper{
+
+}
+#gemWrapper a{
+ display: block;
+ width: 200px;
+ height: 200px;
+ display:inline-block;
+ margin-right:10px;
+}
+#gemWrapper a#redGem{
+  background-color:red;
+}
+#gemWrapper a#diamond{
+  background-color:green;
+}
+#gemWrapper a#yellowGem{
+  background-color:yellow;
+}
+#gemWrapper a#squareGem{
+  background-color:purple;
+}
+#scoreTracker{
+
+}
+#scoreTracker p{
+
+}
+h2#totalScore{
+
+}
