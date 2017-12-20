@@ -26,32 +26,22 @@ function randomGemGenerator(){
 //Checks wins and losses
 function winLossCheck(){
   if (userScore == matchScore){
-    winMatch();
+    //User Wins!
+    $("#winlossalert").html("You won, hooray!");
+  	userWins++;
+  	$("#winTracker").text(userWins);
+    restartGems();
   } else if (userScore > matchScore){
-    loseMatch();
+    //User Lost
+    $("#winlossalert").html("No gems for you!");
+  	userLosses++;
+  	$("#lossTracker").text(userLosses);
+    restartGems();
   }
-}
-
-//User Wins
-function winMatch() {
-  $("#winlossalert").html("You won, hooray!");
-	userWins++;
-	$("#winTracker").text(userWins);
-  restartGems();
-}
-
-//User Loses
-function loseMatch() {
-  $("#winlossalert").html("No gems for you!");
-	userLosses++;
-	$("#lossTracker").text(userLosses);
-  restartGems();
 }
 
 //Restarts the Game
 function restartGems() {
-  //$("#winlossalert").html("");
-  //var matchScore = Math.floor(Math.random()*(120-19+1)+19);
   $("#currentScore h2").empty(matchScore);
   $("#currentScore h2").append(matchScore);
   randomGemGenerator();
