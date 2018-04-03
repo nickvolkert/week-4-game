@@ -5,7 +5,7 @@ var redGemNum = parseInt(Math.floor(Math.random() * 12) + 1);
 var diamondNum = parseInt(Math.floor(Math.random() * 12) + 1);
 var yelGemNum = parseInt(Math.floor(Math.random() * 12) + 1);
 var squareGemNum = parseInt(Math.floor(Math.random() * 12) + 1);
-var matchScore = Math.floor(Math.random()*(120-19+1)+19);
+var matchScore;
 //Adds the Gem clicks to the User's Score
 function scoreBucket(){
   $("#totalScore").text(userScore);
@@ -21,6 +21,8 @@ function randomGemGenerator(){
   diamondNum
   yelGemNum
   squareGemNum
+  matchScore = Math.floor(Math.random()*(120-19+1)+19);
+  console.log(matchScore)
 }
 
 //Checks wins and losses
@@ -51,8 +53,9 @@ function restartGems() {
 
 //Game Click Fuction
 function gamePlay(){
-    matchScoreGenerator();
+
     randomGemGenerator();
+    matchScoreGenerator();
     //Red Gems
     $("#redGem").on("click", function(){
       userScore = redGemNum + userScore;
