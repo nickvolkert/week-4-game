@@ -1,36 +1,62 @@
 body{
-  background-color: #eee;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #FEC03B;
   text-align: center;
 }
 h1{
-  font-size: 24px;
-  text-align: center;
-  padding: 20px 0;
+  font-size: 34px;
+  padding: 0 0 18px 0;
 }
 #gameWrapper{
-
+  background-color: #44D9CB;
+  border:10px solid #000;
+  width:860px;
+  height: auto;
+  margin: 40px auto 0 auto;
 }
 #gameTop{
-
+  background-color: #A9E1EF;
+  padding: 30px 0;
 }
 h2{
-
+ font-size: 72px
 }
 h3{
 
 }
-#instructions{
+p{
+  font-size: 15px;
+}
+#howtoplay{
 
 }
-#instructions p{
+#howToLink{
 
+}
+#howToLink a{
+  width:350px;
+  height:33px;
+  padding: 12px 0 0 0;
+  background-color: #FFF;
+  border:6px solid #000;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color:#000;
+  box-shadow: 0 6px 0 #000;
+}
+#howToLink a:hover{
+  box-shadow: 0 0 0 #000;
+  transform: translate(0, 4px);
 }
 #scoreWrapper{
 
 }
 #currentScore{
-
+  padding:20px 0 10px 0;
+}
+#currentScore p{
+  padding-bottom: 10px;
 }
 #progressTracker{
 
@@ -41,34 +67,70 @@ h3{
 #lossTracker{
 
 }
+#scoreWrapper{
+  height: 355px;
+}
 #gemWrapper{
-
+ width:632px;
+ height:200px;
+ margin: 0 auto;
 }
 #gemWrapper a{
- display: block;
- width: 200px;
  height: 200px;
- display:inline-block;
- margin-right:10px;
+ display: inline-block;
+ margin-right: 40px;
+ float: left;
 }
 #gemWrapper a#redGem{
-  background-color:red;
+  background: url("../img/gems.svg") no-repeat -350px top;
+  background-size: 630px;
+  width: 121px;
+}
+#gemWrapper a#redGem:hover{
+  background-position: -350px -229px;
 }
 #gemWrapper a#diamond{
-  background-color:green;
+  background: url("../img/gems.svg") no-repeat 0 top;
+  background-size: 630px;
+  width: 171px;
+}
+#gemWrapper a#diamond:hover{
+  background-position: 0 -229px;
 }
 #gemWrapper a#yellowGem{
-  background-color:yellow;
+  background: url("../img/gems.svg") no-repeat -510px top;
+  background-size: 630px;
+  width: 119px;
+  margin-right: 0;
+}
+#gemWrapper a#yellowGem:hover{
+  background-position: -510px -229px;
 }
 #gemWrapper a#squareGem{
-  background-color:purple;
+  background: url("../img/gems.svg") no-repeat -210px top;
+  background-size: 630px;
+  width: 100px;
+}
+#gemWrapper a#squareGem:hover{
+  background-position: -210px -229px;
 }
 #scoreTracker{
-
+  background-color: #1DCAD3;
 }
 #scoreTracker p{
 
 }
 h2#totalScore{
 
+}
+#dropShadow{
+  width:850px;
+  height: 10px;
+  background-color: #000;
+  margin: 0 auto;
+}
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
 }
