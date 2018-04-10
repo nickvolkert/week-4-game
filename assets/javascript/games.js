@@ -10,69 +10,75 @@ var matchScore;
 function scoreBucket(){
   $("#totalScore").text(userScore);
 }
-//Generates a random number the user has to press gems to match
-function matchScoreGenerator(){
-    $("#currentScore h2").html(matchScore);
-}
-function gameCurtain(){
-    $("#intCurtain").show();
-}
 //Generates the random Gem Numbers
 function randomGemGenerator(){
-  redGemNum
-  diamondNum
-  yelGemNum
-  squareGemNum
+  redGemNum;
+  diamondNum;
+  yelGemNum;
+  squareGemNum;
   matchScore = Math.floor(Math.random()*(120-19+1)+19);
-  console.log(matchScore)
+  console.log("Match Score: " + matchScore);
+  console.log("User Score: " + userScore);
 }
-
+function clearNumbers(){
+  redGemNum = 0;
+  diamondNum = 0;
+  yelGemNum = 0;
+  squareGemNum = 0;
+}
 //Checks wins and losses
 function winLossCheck(){
   if (userScore == matchScore){
     //User Wins!
     userWins++;
-    gameCurtain()
+    $("#winTracker").text(userWins++);
+    $("#intCurtain").show();
     $("#winScreen").show();
     $("#lossScreen").hide();
-  	restartGems();
+    $("#gameInstructions").hide();
     console.log("is win working?");
   } else if (userScore > matchScore){
     //User Lost
-  	userLosses++;
-    gameCurtain()
+    userLosses++;
+  	$("#lossTracker").text(userLosses);
+    $("#intCurtain").show();
     $("#lossScreen").show();
-    restartGems();
+    $("#winScreen").hide();
+    $("#gameInstructions").hide();
     console.log("is loss working?");
   }
 }
 
-//Restarts the Game
-function restartGems() {
-  $(".playAgain").on("click", function(){
-    $("#currentScore h2").empty(matchScore);
-    $("#currentScore h2").append(matchScore);
-    randomGemGenerator();
-    userScore = 0;
-    scoreBucket();
-  });
-}
+//Game Instructions Modal
 function gameInst(){
   $("#howToLink a").on("click", function(){
-    gameCurtain();
+    $("#intCurtain").show();
     $("#gameInstructions").show();
   });
+  $("#btnInstructions").on("click", function(){
+    $("#intCurtain").hide();
+    $("#gameInstructions").hide();
+    $("#lossScreen").hide();
+    $("#winScreen").hide();
+  });
 }
+
+//Close all modals
 function closeCurtain(){
   $(".playAgain").on("click", function(){
     $("#gameInstructions").hide();
     $("#intCurtain").hide();
+    $("#lossScreen").hide();
+    $("#winScreen").hide();
+    gamePlay();
   });
 }
 //Game Click Fuction
 function gamePlay(){
+    userScore = 0;
     randomGemGenerator();
-    matchScoreGenerator();
+    scoreBucket();
+    $("#currentScore h2").text(matchScore);
     //Red Gems
     $("#redGem").on("click", function(){
       userScore = redGemNum + userScore;

@@ -26,7 +26,8 @@ p{
   margin-bottom:20px;
 }
 #howToLink a,
-a.playAgain{
+a.playAgain,
+a.whiteBtn{
   width:350px;
   height:33px;
   padding: 12px 0 0 0;
@@ -39,11 +40,13 @@ a.playAgain{
   box-shadow: 0 6px 0 #000;
 }
 #howToLink a:hover,
-a.playAgain:hover{
+a.playAgain:hover,
+a.whiteBtn:hover{
   box-shadow: 0 0 0 #000;
   transform: translate(0, 4px);
 }
-a.playAgain{
+a.playAgain,
+a.whiteBtn{
   width:220px;
 }
 #currentScore{
