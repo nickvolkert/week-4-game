@@ -32,12 +32,32 @@
       <div id="scoreTracker">
           <p>Your total score is:</p>
           <h2 id="totalScore">0</h2>
-          <h3>Wins: <span id="winTracker">0</span></h3>
-          <h3>Losses: <span id="lossTracker">0</span></h3>
+          <h3>Wins: <span id="winTracker">0</span> Losses: <span id="lossTracker">0</span></h3>
       </div>
 
     </div>
     <div id="dropShadow"></div>
+    <div id="intCurtain">
+      <div id="gameInstructions">
+        <h2>Game Instructions</h2>
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals that have a set score that you’ll click to match the random score.</p>
+        <p>You win the game when you combine the crystal scores with the generated score.</p>
+        <p>The value of each crystal is hidden until you click on it.</p>
+        <p>Each time the game starts, the value for the crystal and random number changes!</p>
+        <a href="javascript:;" class="playAgain">Got it!</a>
+      </div>
+      <div id="winScreen">
+        <h2>You won, hooray!</h2>
+        <p>Congrats on your win!</p>
+        <a href="javascript:;" class="playAgain">Play Again</a>
+      </div>
+      <div id="lossScreen">
+        <h2>No Gems for you!</h2>
+        <p>Sorry, you lost!</p>
+        <a href="javascript:;" class="playAgain">Play Again</a>
+      </div>
+    </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/games.js"></script>
   </body>

@@ -12,7 +12,7 @@ h1{
   border:10px solid #000;
   width:860px;
   height: auto;
-  margin: 40px auto 0 auto;
+  margin: 30px auto 0 auto;
 }
 #gameTop{
   background-color: #A9E1EF;
@@ -21,19 +21,12 @@ h1{
 h2{
  font-size: 72px
 }
-h3{
-
-}
 p{
   font-size: 15px;
+  margin-bottom:20px;
 }
-#howtoplay{
-
-}
-#howToLink{
-
-}
-#howToLink a{
+#howToLink a,
+a.playAgain{
   width:350px;
   height:33px;
   padding: 12px 0 0 0;
@@ -45,27 +38,23 @@ p{
   color:#000;
   box-shadow: 0 6px 0 #000;
 }
-#howToLink a:hover{
+#howToLink a:hover,
+a.playAgain:hover{
   box-shadow: 0 0 0 #000;
   transform: translate(0, 4px);
 }
-#scoreWrapper{
-
+a.playAgain{
+  width:220px;
 }
 #currentScore{
   padding:20px 0 10px 0;
 }
-#currentScore p{
+#currentScore p,
+#scoreTracker p{
   padding-bottom: 10px;
 }
-#progressTracker{
-
-}
-#winTracker{
-
-}
-#lossTracker{
-
+#scoreTracker h3{
+  padding-top: 10px;
 }
 #scoreWrapper{
   height: 355px;
@@ -116,9 +105,7 @@ p{
 }
 #scoreTracker{
   background-color: #1DCAD3;
-}
-#scoreTracker p{
-
+  padding: 20px 0;
 }
 h2#totalScore{
 
@@ -127,7 +114,42 @@ h2#totalScore{
   width:850px;
   height: 10px;
   background-color: #000;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
+}
+#intCurtain{
+  display:none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(254,192,59);
+  background-color: rgba(254,192,59,0.9);
+}
+#gameInstructions,
+#winScreen,
+#lossScreen{
+  display: none;
+  background-color: #FFF;
+  border:10px solid #000;
+  width:700px;
+  height: auto;
+  margin: 80px auto 0 auto;
+  padding: 40px;
+}
+#gameInstructions h2,
+#winScreen h2,
+#lossScreen h2{
+  font-size:40px;
+  padding-bottom:20px;
+}
+#gameInstructions p{
+  text-align: left;
+}
+#gameInstructions a{
+  margin-top:30px;
 }
 .clearfix::after {
   content: '';

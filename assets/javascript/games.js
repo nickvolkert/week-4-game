@@ -14,7 +14,9 @@ function scoreBucket(){
 function matchScoreGenerator(){
     $("#currentScore h2").html(matchScore);
 }
-
+function gameCurtain(){
+    $("#intCurtain").show();
+}
 //Generates the random Gem Numbers
 function randomGemGenerator(){
   redGemNum
@@ -29,31 +31,46 @@ function randomGemGenerator(){
 function winLossCheck(){
   if (userScore == matchScore){
     //User Wins!
-    $("#winlossalert").html("You won, hooray!");
-  	userWins++;
-  	$("#winTracker").text(userWins);
-    restartGems();
+    userWins++;
+    gameCurtain()
+    $("#winScreen").show();
+    $("#lossScreen").hide();
+  	restartGems();
+    console.log("is win working?");
   } else if (userScore > matchScore){
     //User Lost
-    $("#winlossalert").html("No gems for you!");
   	userLosses++;
-  	$("#lossTracker").text(userLosses);
+    gameCurtain()
+    $("#lossScreen").show();
     restartGems();
+    console.log("is loss working?");
   }
 }
 
 //Restarts the Game
 function restartGems() {
-  $("#currentScore h2").empty(matchScore);
-  $("#currentScore h2").append(matchScore);
-  randomGemGenerator();
-  userScore = 0;
-  scoreBucket();
+  $(".playAgain").on("click", function(){
+    $("#currentScore h2").empty(matchScore);
+    $("#currentScore h2").append(matchScore);
+    randomGemGenerator();
+    userScore = 0;
+    scoreBucket();
+  });
 }
-
+function gameInst(){
+  $("#howToLink a").on("click", function(){
+    gameCurtain();
+    $("#gameInstructions").show();
+  });
+}
+function closeCurtain(){
+  $(".playAgain").on("click", function(){
+    $("#gameInstructions").hide();
+    $("#intCurtain").hide();
+  });
+}
 //Game Click Fuction
 function gamePlay(){
-
     randomGemGenerator();
     matchScoreGenerator();
     //Red Gems
@@ -86,3 +103,5 @@ function gamePlay(){
     });
 }
 gamePlay();
+gameInst();
+closeCurtain();
