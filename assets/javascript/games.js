@@ -83,34 +83,34 @@ function gamePlay(){
     scoreBucket();
     $("#currentScore h2").text(matchScore);
     //Red Gems
-    $("#redGem").on("click", function(){
-      userScore += redGemNum;
-      scoreBucket();
-      console.log("Red Gem = " + redGemNum);
-      winLossCheck();
-    });
-    //Diamonds
-    $("#diamond").on("click", function(){
-      userScore += diamondNum;
-      scoreBucket();
-      console.log("Diamond = " + diamondNum);
-      winLossCheck();
-    });
-    //Yellow Gems
-    $("#yellowGem").on("click", function(){
-      userScore += yelGemNum;
-      scoreBucket();
-      console.log("Yellow Gem = " + yelGemNum);
-      winLossCheck();
-    });
-    //Square Gems
-    $("#squareGem").on("click", function(){
-      userScore += squareGemNum;
-      scoreBucket();
-      console.log("Square Gem = " + squareGemNum);
-      winLossCheck();
-    });
 }
+$("#redGem").on("click", function(){
+  userScore += redGemNum;
+  scoreBucket();
+  console.log("Red Gem = " + redGemNum);
+  winLossCheck();
+});
+//Diamonds
+$("#diamond").on("click", function(){
+  userScore += diamondNum;
+  scoreBucket();
+  console.log("Diamond = " + diamondNum);
+  winLossCheck();
+});
+//Yellow Gems
+$("#yellowGem").on("click", function(){
+  userScore += yelGemNum;
+  scoreBucket();
+  console.log("Yellow Gem = " + yelGemNum);
+  winLossCheck();
+});
+//Square Gems
+$("#squareGem").on("click", function(){
+  userScore += squareGemNum;
+  scoreBucket();
+  console.log("Square Gem = " + squareGemNum);
+  winLossCheck();
+});
 gamePlay();
 gameInst();
 closeCurtain();
